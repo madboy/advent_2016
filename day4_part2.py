@@ -6,7 +6,6 @@ import fileinput
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 indices = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
 ai = dict(zip(alpha, indices))
-ia = dict(zip(indices, alpha))
 
 
 def decrypt_room(letters, count):
@@ -17,7 +16,7 @@ def decrypt_room(letters, count):
             room_name += letter
             continue
         index = (ai[letter] + fwd) % 26
-        room_name += ia[index]
+        room_name += alpha[index]
     return room_name
 
 
