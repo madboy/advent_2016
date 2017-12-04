@@ -1,2 +1,3 @@
 .vscode/*
 py3.6.3/*
+.mypy_cache/*
